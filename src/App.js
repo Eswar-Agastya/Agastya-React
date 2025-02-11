@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import Services from "./components/Sections/Services.jsx";
 import Header from "./components/Sections/Header.jsx";
 
-import RedirectWithLoading from "./components/Sections/RedirectWithLoading.jsx";
+//import RedirectWithLoading from "./components/Sections/RedirectWithLoading.jsx";
 import Projects from "./components/Sections/Projects.jsx";
 import Contact from "./components/Sections/Contact.jsx";
 import TopNavbar from "./components/Nav/TopNavbar.jsx";
