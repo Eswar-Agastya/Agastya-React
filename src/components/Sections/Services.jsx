@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import ClientSlider from "../Elements/ClientSlider";
+// import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
 // Assets
@@ -18,7 +18,7 @@ export default function Services() {
     <Wrapper id="services">
       <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
-          <ClientSlider />
+          {/* <ClientSlider /> */}
         </div>
       </div>
       <div className="whiteBg" style={{ padding: "60px 0" }}>
