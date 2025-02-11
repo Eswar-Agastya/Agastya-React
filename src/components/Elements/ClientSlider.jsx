@@ -15,11 +15,10 @@ export default function ClientSlider() {
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 2,
-    arrows: false,
     autoplay: true, 
-    arrows: true, // Enable arrows
-    dots: true,        // Add this line for auto scroll
-    autoplaySpeed: 1000,    // Add this line to set speed (3000ms -> 3 seconds)
+    arrows: true, 
+    dots: true,       
+    autoplaySpeed: 1000,    
     responsive: [
       {
         breakpoint: 1024,
