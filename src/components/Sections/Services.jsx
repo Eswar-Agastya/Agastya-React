@@ -54,7 +54,8 @@ export default function Services() {
                 title="Manufacturing Services"
                 subtitle="PCB Fabrication"
                 subtitle1="PCB Assembly"
-                subtitle2="Assembly Services"
+                subtitle2="Box Build"
+                subtitle3="Contract Manfacturing"
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>

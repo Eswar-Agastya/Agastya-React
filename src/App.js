@@ -12,6 +12,7 @@ import Footer from "./components/Sections/Footer.jsx";
 import UserList from "./components/Sections/DataList.jsx";
 
 export default function App() {
+  
   return (
     <Router>
       <TopNavbar />

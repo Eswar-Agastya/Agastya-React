@@ -1,10 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 // Assets
-import ProductImg1 from "../../assets/img/projects/2.jpeg";
-import ProductImg2 from "../../assets/img/projects/2.jpeg";
-import ProductImg3 from "../../assets/img/projects/3.webp";
-import ProductImg4 from "../../assets/img/projects/3.webp";
+import ProductImg1 from "../../assets/img/projects/AC_DC121.png";
+import ProductImg2 from "../../assets/img/projects/AC-DC500W2.png";
+import ProductImg3 from "../../assets/img/projects/DC-DC.png";
+import ProductImg4 from "../../assets/img/projects/BLDC1.png";
+import ProductImg5 from "../../assets/img/projects/DC-Motor-Controller1.png";
+import ProductImg6 from "../../assets/img/projects/pcb.jpg";
+
+
 
 export default function Products() {
   const productData = [
@@ -18,16 +22,16 @@ export default function Products() {
       link: "/products/ac-dc-converter",
     },
     {
-      img: ProductImg1,
+      img: ProductImg2,
       title: "AC-DC Converter",
       description: [
-        "Voltage Range from 12V - 54V.",
+        
         "Current Range from 500W.",
       ],
       link: "/products/ac-dc-converter",
     },
     {
-      img: ProductImg2,
+      img: ProductImg3,
       title: "DC - DC Converter",
       description: [
         "Explore our 30W AC-DC Series.",
@@ -36,7 +40,7 @@ export default function Products() {
       link: "/products/30w-ac-dc-series",
     },
     {
-      img: ProductImg3,
+      img: ProductImg4,
       title: "BLDC Fan Controller",
       description: [
         "Discover our 60W AC-DC Series.",
@@ -45,7 +49,7 @@ export default function Products() {
       link: "/products/60w-ac-dc-series",
     },
     {
-      img: ProductImg4,
+      img: ProductImg5,
       title: "DC Motor Controller",
       description: [
         "Learn about our 75W AC-DC Series.",
@@ -54,7 +58,7 @@ export default function Products() {
       link: "/products/75w-ac-dc-series",
     },
     {
-      img: ProductImg4,
+      img: ProductImg6,
       title: "PCB Fabrication",
       description: [
         "Learn about our 75W AC-DC Series.",
@@ -117,6 +121,11 @@ const ProductGrid = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const ProductCard = styled.a`
@@ -134,15 +143,22 @@ const ProductCard = styled.a`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 350px;
+  }
 `;
 
 const ImageWrapper = styled.div`
   img {
     width: 100%;
-    height: auto;
+    height: 300px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures the image covers the area */
     display: block;
   }
 `;
+
 
 const CardContent = styled.div`
   padding: 20px;
