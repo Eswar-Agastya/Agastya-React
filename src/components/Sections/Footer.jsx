@@ -27,7 +27,7 @@ export default function Contact() {
           <div className="contact-info">
             <div className="info-item">
               <i className="fas fa-map-marker-alt" style={{ marginRight: "8px" }}></i>
-              <a href="https://www.google.com/maps?q=Synedyne+Systems+Private+Limited,+Bengaluru,+India" target="_blank" rel="noopener noreferrer" style={{ color: "silver" }}>
+              <a href="https://maps.app.goo.gl/pCQWv11tfkwPCBGb6" target="_blank" rel="noopener noreferrer" style={{ color: "silver" }}>
               AGASTYAGLOBALCIRCUITS PVT, LTD,<br />
               # No.9A,1st Main, Vinayaka Layout,<br />
               Near IIHMR College, Hulimangala, Jigani Hobli, Anekal Taluk, Bengaluru-560105. 

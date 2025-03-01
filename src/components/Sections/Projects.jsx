@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 // Assets
 import ProductImg1 from "../../assets/img/projects/AC_DC121.png";
-import ProductImg2 from "../../assets/img/projects/AC-DC500W2.png";
-import ProductImg3 from "../../assets/img/projects/DC-DC.png";
+import ProductImg2 from "../../assets/img/projects/AC_DC12.png";
+import ProductImg3 from "../../assets/img/projects/DC-DC1.png";
 import ProductImg4 from "../../assets/img/projects/BLDC1.png";
 import ProductImg5 from "../../assets/img/projects/DC-Motor-Controller1.png";
-import ProductImg6 from "../../assets/img/projects/pcb.jpg";
+import ProductImg6 from "../../assets/img/projects/pcb.png";
 
 
 
@@ -14,57 +14,56 @@ export default function Products() {
   const productData = [
     {
       img: ProductImg1,
-      title: "AC-DC Converter",
+      title: "AC - DC Converter",
       description: [
-        "Voltage Range from 5V - 24V.",
-        "Current Range from 40W - 100W.",
+        "Voltage Range : 5V - 24V",
+        "OutPut Power : 40W - 100W",
       ],
-      link: "/products/ac-dc-converter",
+      link: "",
     },
     {
       img: ProductImg2,
-      title: "AC-DC Converter",
+      title: "AC - DC Converter",
       description: [
-        
-        "Current Range from 500W.",
+        "Voltage Range : 12V - 54V",
+        "OutPut Power : 500W",
       ],
-      link: "/products/ac-dc-converter",
+      link: "",
     },
     {
       img: ProductImg3,
       title: "DC - DC Converter",
       description: [
-        "Explore our 30W AC-DC Series.",
-        "Compact and efficient power solutions.",
+        "Input Voltage : 36V - 120v",
+        "OutPut : 5V - 72V & UpTo 10A",
       ],
-      link: "/products/30w-ac-dc-series",
+      link: "",
     },
     {
       img: ProductImg4,
       title: "BLDC Fan Controller",
       description: [
-        "Discover our 60W AC-DC Series.",
-        "Ideal for medium power applications.",
+        "Input AC Range : 190V - 260V",
+        "Output DC Power : 35W",
       ],
-      link: "/products/60w-ac-dc-series",
+      link: "",
     },
     {
       img: ProductImg5,
       title: "DC Motor Controller",
       description: [
-        "Learn about our 75W AC-DC Series.",
-        "Efficient solutions for demanding needs.",
+        "Input Voltage : 12V - 16V",
+        "Output Power : 50W - 250W",
       ],
-      link: "/products/75w-ac-dc-series",
+      link: "",
     },
     {
       img: ProductImg6,
       title: "PCB Fabrication",
       description: [
-        "Learn about our 75W AC-DC Series.",
-        "Efficient solutions for demanding needs.",
+        "Multilayer PCBs Upto - 40 Layers",
       ],
-      link: "/products/75w-ac-dc-series",
+      link: "",
     },
   ];
 
