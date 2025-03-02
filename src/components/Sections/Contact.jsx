@@ -75,12 +75,12 @@ export default function Contact() {
                     <img src={ContactImg1} alt="office" />
                   </AddImgWrapper>
                   <AddImgWrapper>
-                    <img src={ContactImg2} alt="office" />
+                    <img src={ContactImg4} alt="office" />
                   </AddImgWrapper>
                 </div>
                 <div className="flexNullCenter">
                   <AddImgWrapper>
-                    <img src={ContactImg4} alt="office" />
+                    <img src={ContactImg2} alt="office" />
                   </AddImgWrapper>
                   <AddImgWrapper>
                     <img src={ContactImg3} alt="office" />
