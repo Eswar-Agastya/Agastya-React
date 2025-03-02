@@ -3,9 +3,11 @@ import styled from "styled-components";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+// Assets
 import ContactImg1 from "../../assets/img/contact-1.jpg";
 import ContactImg2 from "../../assets/img/contact-2.jpg";
 import ContactImg3 from "../../assets/img/contact-3.jpg";
+import ContactImg4 from "../../assets/img/contact-4.jpg";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -39,27 +41,25 @@ export default function Contact() {
       toast.error("Form submission failed. Please try again.", { autoClose: 10000, hideProgressBar: false });
     }
   };
-  
 
   return (
     <Wrapper id="contact">
-      <ToastContainer autoClose={5000} hideProgressBar={false} />  {/* Set autoClose and hideProgressBar here */}
+      <ToastContainer autoClose={5000} hideProgressBar={false} />
       <div className="lightBg">
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold">Let's get in touch</h1>
-            <p className="font13"><br /></p>
           </HeaderInfo>
-          <div className="row" style={{ paddingBottom: "30px" }}>
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <Advertising className="flexSpaceCenter">
+            <AddLeft>
               <Form onSubmit={handleSubmit}>
-                <label className="font13">First name:</label>
+                <label className="font13 flex">First name:</label>
                 <input type="text" id="fname" name="fname" className="font20 extraBold" value={formData.fname} onChange={handleChange} />
-                <label className="font13">Email:</label>
+                <label className="font13 flex">Email:</label>
                 <input type="email" id="email" name="email" className="font20 extraBold" value={formData.email} onChange={handleChange} />
-                <label className="font13">Mobile Number:</label>
+                <label className="font13 flex">Mobile Number:</label>
                 <input type="tel" id="mobile" name="mobile" className="font20 extraBold" value={formData.mobile} onChange={handleChange} />
-                <label className="font13">Message:</label>
+                <label className="font13 flex">Message:</label>
                 <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" value={formData.message} onChange={handleChange} />
                 <SubmitWrapper className="flex">
                   <ButtonWrapper>
@@ -67,23 +67,28 @@ export default function Contact() {
                   </ButtonWrapper>
                 </SubmitWrapper>
               </Form>
-            </div>
-            <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">
-              <div style={{ width: "50%" }} className="flexNullCenter flexColumn">
-                <ContactImgBox>
-                  <img src={ContactImg1} alt="office" className="radius6" />
-                </ContactImgBox>
-                <ContactImgBox>
-                  <img src={ContactImg2} alt="office" className="radius6" />
-                </ContactImgBox>
-              </div>
-              <div style={{ width: "50%" }}>
-                <div style={{ marginTop: "100px" }}>
-                  <img src={ContactImg3} alt="office" className="radius6" />
+            </AddLeft>
+            <AddRight>
+              <AddRightInner>
+                <div className="flexNullCenter">
+                  <AddImgWrapper className="flexCenter">
+                    <img src={ContactImg1} alt="office" />
+                  </AddImgWrapper>
+                  <AddImgWrapper>
+                    <img src={ContactImg2} alt="office" />
+                  </AddImgWrapper>
                 </div>
-              </div>
-            </div>
-          </div>
+                <div className="flexNullCenter">
+                  <AddImgWrapper>
+                    <img src={ContactImg3} alt="office" />
+                  </AddImgWrapper>
+                  <AddImgWrapper>
+                    <img src={ContactImg4} alt="office" />
+                  </AddImgWrapper>
+                </div>
+              </AddRightInner>
+            </AddRight>
+          </Advertising>
         </div>
       </div>
     </Wrapper>
@@ -101,11 +106,7 @@ const HeaderInfo = styled.div`
     text-align: center;
   }
 `;
-const ContactImgBox = styled.div`
-  max-width: 180px; 
-  align-self: flex-end; 
-  margin: 10px 30px 10px 0;
-`;
+
 const Form = styled.form`
   padding: 70px 0 30px 0;
   input,
@@ -130,8 +131,10 @@ const Form = styled.form`
 `;
 
 const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: center;
+   max-width: 190px;
+  @media (max-width: 960px) {
+    margin: 0 auto;
+  }
 `;
 
 const ButtonInput = styled.input`
@@ -161,3 +164,63 @@ const SubmitWrapper = styled.div`
     margin-bottom: 50px;
   }
 `;
+
+const Advertising = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0px 0;
+  padding: 0px 0;
+  @media (max-width: 1160px) {
+    flex-direction: column;
+    padding: 100px 0 40px 0;
+  }
+  @media (max-width: 860px) {
+    padding: 0 0 30px 0;
+    margin: 80px 0 0px 0;
+  }
+`;
+
+const AddLeft = styled.div`
+  width: 48%;
+  p {
+    max-width: 475px;
+  }
+  @media (max-width: 860px) {
+    width: 100%;
+    order: 2;
+    text-align: center;
+    h2 {
+      line-height: 3rem;
+      margin: 15px 0;
+    }
+    p {
+      margin: 0 auto;
+    }
+  }
+`;
+
+const AddRight = styled.div`
+  width: 48%;
+  @media (max-width: 860px) {
+    width: 100%;
+    order: 1;
+  }
+`;
+
+const AddRightInner = styled.div`
+  width: 100%;
+`;
+
+const AddImgWrapper = styled.div`
+  width: 48%;
+  margin: 1%;
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  }
+`;
+
+export { Wrapper, HeaderInfo, Form, ButtonWrapper, ButtonInput, SubmitWrapper, Advertising, AddLeft, AddRight, AddRightInner, AddImgWrapper };
