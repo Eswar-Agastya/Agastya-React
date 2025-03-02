@@ -34,7 +34,7 @@ export default function Services() {
               
               <ServiceBox
                 icon="roller"
-                title="Circuit Design Services"
+                title="Design Services"
                 subtitle="Analog/Digital Circuit Design"
                 subtitle1="Custom Circuit Design"
                 subtitle2="PCB Design"

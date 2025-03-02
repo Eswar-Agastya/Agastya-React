@@ -53,13 +53,13 @@ export default function Contact() {
           <Advertising className="flexSpaceCenter">
             <AddLeft>
               <Form onSubmit={handleSubmit}>
-                <label className="font13 flex">First name:</label>
+                <label className="font13 flex">First name</label>
                 <input type="text" id="fname" name="fname" className="font20 extraBold" value={formData.fname} onChange={handleChange} />
-                <label className="font13 flex">Email:</label>
+                <label className="font13 flex">Email</label>
                 <input type="email" id="email" name="email" className="font20 extraBold" value={formData.email} onChange={handleChange} />
-                <label className="font13 flex">Mobile Number:</label>
+                <label className="font13 flex">Mobile Number</label>
                 <input type="tel" id="mobile" name="mobile" className="font20 extraBold" value={formData.mobile} onChange={handleChange} />
-                <label className="font13 flex">Message:</label>
+                <label className="font13 flex">Message</label>
                 <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" value={formData.message} onChange={handleChange} />
                 <SubmitWrapper className="flex">
                   <ButtonWrapper>
@@ -80,10 +80,10 @@ export default function Contact() {
                 </div>
                 <div className="flexNullCenter">
                   <AddImgWrapper>
-                    <img src={ContactImg3} alt="office" />
+                    <img src={ContactImg4} alt="office" />
                   </AddImgWrapper>
                   <AddImgWrapper>
-                    <img src={ContactImg4} alt="office" />
+                    <img src={ContactImg3} alt="office" />
                   </AddImgWrapper>
                 </div>
               </AddRightInner>
