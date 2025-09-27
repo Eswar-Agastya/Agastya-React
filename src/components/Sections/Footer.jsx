@@ -21,135 +21,173 @@ export default function Contact() {
   return (
     <Wrapper>
       <Footer>
-        <div className="footer-section">
-          <h3>ABOUT US</h3>
-
-          <div className="contact-info">
-            <div className="info-item">
-              <i className="fas fa-map-marker-alt" style={{ marginRight: "8px" }}></i>
-              <a href="https://maps.app.goo.gl/pCQWv11tfkwPCBGb6" target="_blank" rel="noopener noreferrer" style={{ color: "silver" }}>
-              AGASTYAGLOBALCIRCUITS PVT, LTD,<br />
-              # No.9A,1st Main, Vinayaka Layout,<br />
-              Near IIHMR College, Hulimangala, Jigani Hobli, Anekal Taluk, Bengaluru-560105. 
-              </a>
+        <div className="footer-main">
+          <div className="footer-left">
+            <div className="footer-logo-row">
+              <img src={AGC} alt="Agastya Global Circuits Logo" className="footer-logo" />
+              <span className="footer-company">Agastya Global Circuits</span>
             </div>
-
-            <div className="info-item">
-              <i className="fas fa-envelope" style={{ marginRight: "8px" }}></i>
-              <a href="mailto:contact@agastyaglobalcircuits.com" style={{ color: "silver", display: "block" }}>contact@agastyaglobalcircuits.com</a><br />
+            <div className="footer-address">
+              # No.9A, 1st Main, Vinayaka Layout,<br />
+              Near IIHMR College, Hulimangala, Jigani Hobli,<br />
+              Anekal Taluk, Bengaluru – 560105, Karnataka
             </div>
-            {/* <div className="info-item">
-              <i className="fas fa-envelope" style={{ marginRight: "8px" }}></i>
-              <a href="mailto:career@synedynesystems.com" style={{ color: "silver", display: "block" }}>career@synedynesystems.com</a>
-            </div> */}
-            <div className="info-item">
-              <i className="fas fa-phone-alt" style={{ marginRight: "8px" }}></i>
-              <a href="tel:8555030517" style={{ color: "silver" }}>8555030517</a>
+            <div className="footer-contact-row">
+              <a href="mailto:contact@agastyaglobalcircuits.com" className="footer-contact">contact@agastyaglobalcircuits.com</a>
+              <span className="footer-contact">8555030517</span>
+            </div>
+            <div className="footer-social-row">
+              <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
             </div>
           </div>
-          <br></br>
-          <div className="social-icons">
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-linkedin"></i></a>
+          <div className="footer-links">
+            <div className="footer-links-col">
+              <div className="footer-links-title">COMPANY</div>
+              <Link to="/about">About Us</Link>
+              <Link to="/services">Services</Link>          
+              <Link to="/contact">Contact</Link>
+            </div>
+            <div className="footer-links-col">
+              <div className="footer-links-title">PRODUCTS</div>
+              <Link to="/products">Our Products</Link>
+            </div>
           </div>
-        </div>
-        <div className="footer-section">
-          <h3>INFORMATION</h3>
-          <ul>
-            <li><Link to="/services" style={{ color: "silver" }}>Services</Link></li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <h3>PRODUCTS</h3>
-          <ul>
-            <li><Link to="/products" style={{ color: "silver" }}>Our Products</Link></li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <h3>Contact Us</h3>
-          <ul>
-            <li><Link to="/contact" style={{ color: "silver" }}>Contact</Link></li>
-          </ul>
         </div>
         <div className="footer-bottom">
-          <p>© 2024 Agastya Global Circuits Pvt Ltd. All rights reserved.</p>
+          <p>© {getCurrentYear()} Agastya Global Circuits Pvt Ltd. All rights reserved.</p>
         </div>
       </Footer>
+
     </Wrapper>
   );
 }
-
+// Styled Components
 const Wrapper = styled.div`
   width: 100%;
+  background: #77797dff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 32px 0 rgba(60,72,120,.09);
 `;
 
 const Footer = styled.footer`
-  background-color: #222;
-  padding: 40px 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 16px 24px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 32px;
+  background: transparent;
 
-  .footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 20px;
-    color: silver;
-    font-family: Arial, sans-serif;
+  .footer-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
   }
-
-  .footer-section h3 {
-    border-bottom: 2px solid silver;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-  }
-
-  .footer-section ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .footer-section ul li {
-    margin: 10px 0;
-  }
-
-  .footer-section ul li a {
-    color: silver;
-    text-decoration: none;
-  }
-
-  .footer-section ul li a:hover {
-    text-decoration: underline;
-  }
-
-  .contact-info {
+  .footer-left {
+    min-width: 260px;
+    max-width: 340px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
   }
-
-  .info-item {
+  .footer-logo-row {
     display: flex;
     align-items: center;
-    text-align: centre;
+    gap: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
   }
-
-  .social-icons {
+  .footer-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px #1976d2aa) drop-shadow(0 0 24px #fff3);
+    background: transparent;
+    border-radius: 12px;
+    transition: filter 0.3s;
+  }
+  .footer-company {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .footer-address {
+    font-size: 0.95rem;
+    color: #f5f5f5;
+    line-height: 1.5;
+  }
+  .footer-contact-row {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
   }
-
-  .social-icons a {
-    color: silver;
-    font-size: 22px;
+  .footer-contact {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
   }
-
+  .footer-contact:hover {
+    color: #1976d2;
+  }
+  .footer-social-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  .footer-social-row a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+  }
+  .footer-social-row a:hover {
+    color: #1976d2;
+  }
+  .footer-links {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .footer-links-col {
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .footer-links-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 6px;
+  }
+  .footer-links-col a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  .footer-links-col a:hover {
+    color: #1976d2;
+  }
   .footer-bottom {
-    text-align: center;
     width: 100%;
-    margin-top: 20px;
-    color: silver;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    border-top: 1px solid #bdbdbd;
+    padding-top: 16px;
+    margin-top: 16px;
   }
 `;
-
