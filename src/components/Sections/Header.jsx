@@ -162,7 +162,7 @@ export default function Header() {
                     <ClientSlider />
                   </div>
                 </div>
-                <ButtonWrapper> <Link activeClass="active" style={{width:"400px", padding: "10px 15px" } } to="services" spy={true} smooth={true} offset={-80} > 
+                <ButtonWrapper> <Link activeClass="active" style={{width:"400px", padding: "10px 15px" } } to="products" spy={true} smooth={true} offset={-80} > 
                 <FullButton title="Let's Know About Our Products"/> </Link> </ButtonWrapper>
       </AdditionalSection1>
     </Wrapper>

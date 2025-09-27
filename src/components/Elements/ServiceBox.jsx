@@ -8,7 +8,7 @@ import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
 import CircuitIcon from "../../assets/svg/Services/Circuit";
 
 
-export default function ServiceBox({icon, title, subtitle, subtitle1,subtitle2}) {
+export default function ServiceBox({icon, title, subtitle, subtitle1,subtitle2,subtitle3}) {
   let getIcon;
 
   switch (icon) {
@@ -37,6 +37,7 @@ export default function ServiceBox({icon, title, subtitle, subtitle1,subtitle2})
       <SubtitleStyle className="font13">{subtitle}</SubtitleStyle>
       <SubtitleStyle className="font13">{subtitle1}</SubtitleStyle>
       <SubtitleStyle className="font13">{subtitle2}</SubtitleStyle>
+      <SubtitleStyle className="font13">{subtitle3}</SubtitleStyle>
     </Wrapper>
   );
 }

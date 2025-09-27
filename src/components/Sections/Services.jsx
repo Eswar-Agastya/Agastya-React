@@ -16,11 +16,11 @@ import { Link } from 'react-router-dom';
 export default function Services() {
   return (
     <Wrapper id="services">
-      <div className="lightBg" style={{ padding: "50px 0" }}>
+      {/* <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
-          {/* <ClientSlider /> */}
+          <ClientSlider />
         </div>
-      </div>
+      </div> */}
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
           <HeaderInfo>
@@ -34,7 +34,7 @@ export default function Services() {
               
               <ServiceBox
                 icon="roller"
-                title="Circuit Design Services"
+                title="Design Services"
                 subtitle="Analog/Digital Circuit Design"
                 subtitle1="Custom Circuit Design"
                 subtitle2="PCB Design"
@@ -54,7 +54,8 @@ export default function Services() {
                 title="Manufacturing Services"
                 subtitle="PCB Fabrication"
                 subtitle1="PCB Assembly"
-                subtitle2="Assembly Services"
+                subtitle2="Box Build"
+                subtitle3="Contract Manfacturing"
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
